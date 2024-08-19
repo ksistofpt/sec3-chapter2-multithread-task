@@ -4,7 +4,7 @@
         Imagine you are designing a traffic light controller for a busy intersection. The traffic light system consists of three stages: <strong>red light</strong>, <strong>yellow light</strong>, and <strong>green light</strong>. These stages must be executed in a specific order to ensure safe and efficient traffic flow.
     </p>
     <p>
-        Your task is to implement the methods: <strong>redLight()</strong>, <strong>yellowLight()</strong>, and <strong>greenLight()</strong>. These methods must be executed strictly in the order of a real traffic light: first red light, then yellow light, and finally green light, regardless of the order in which threads call them.
+        Your task is to implement the methods: <code>redLight()</code>, <strongcode>yellowLight()</code>, and <code>greenLight()</code>. These methods must be executed strictly in the order of a real traffic light: first red light, then yellow light, and finally green light, regardless of the order in which threads call them.
     </p>
 
 <h2>Requirements:</h2>
