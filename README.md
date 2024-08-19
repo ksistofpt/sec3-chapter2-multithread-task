@@ -10,7 +10,7 @@
 <h2>Requirements:</h2>
 <ol>
     <li><strong>Synchronization:</strong> Ensure that methods are executed in strict order.</li>
-    <li><strong>Multithreading:</strong> Methods can be called from different threads, but execution must occur in the order: <code>method1</code>, <code>method2</code>, <code>greenLight()</code>.</li>
+    <li><strong>Multithreading:</strong> Methods can be called from different threads, but execution must occur in the order: <code>redLight()</code>, <code>yellowLight()</code>, <code>greenLight()</code>.</li>
     <li><strong>Use Lock and Condition:</strong> Apply Lock to control access to shared resources and Condition to coordinate threads.</li>
 </ol>
 
