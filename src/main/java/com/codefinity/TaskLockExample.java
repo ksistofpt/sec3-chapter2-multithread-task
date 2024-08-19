@@ -9,15 +9,21 @@ public class TaskLockExample {
     private final Condition condition = lock.newCondition();
     private int counter = 1;
 
-    public void method1() {
-        //TODO...
+    public void redLight() {
+        // TODO: Implement the logic to ensure that the red light is activated.
+        // This method should be called first in the sequence.
+        // Ensure that other lights do not activate until `redLight()` is completed.
     }
 
-    public void method2() throws InterruptedException {
-        //TODO...
+    public void yellowLight() throws InterruptedException {
+        // TODO: Implement the logic to ensure that the yellow light is activated after redLight().
+        // This method should only proceed if `redLight()` has completed.
+        // Handle any synchronization needed to ensure that `yellowLight()` runs in the correct order.
     }
 
-    public void method3() throws InterruptedException {
-        //TODO...
+    public void greenLight() throws InterruptedException {
+        // TODO: Implement the logic to ensure that the green light is activated after `yellowLight()`.
+        // This method should only proceed if `yellowLight()` has completed.
+        // Ensure that `greenLight()` activates only after the proper sequence of lights.
     }
 }

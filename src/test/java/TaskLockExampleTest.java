@@ -22,13 +22,13 @@ public class TaskLockExampleTest {
     void testMethodExecutionOrder() throws InterruptedException {
 
         Thread t1 = new Thread(() -> {
-            taskLockExample.method1();
+            taskLockExample.redLight();
             executionOrder.offer("method1");
         });
 
         Thread t2 = new Thread(() -> {
             try {
-                taskLockExample.method2();
+                taskLockExample.yellowLight();
                 executionOrder.offer("method2");
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -37,7 +37,7 @@ public class TaskLockExampleTest {
 
         Thread t3 = new Thread(() -> {
             try {
-                taskLockExample.method3();
+                taskLockExample.greenLight();
                 executionOrder.offer("method3");
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();

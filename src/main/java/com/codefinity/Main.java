@@ -6,17 +6,17 @@ public class Main {
 
         Thread t1 = new Thread(() -> {
             try {
-                taskLockExample.method3();
+                taskLockExample.greenLight();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
         });
 
-        Thread t2 = new Thread(taskLockExample::method1);
+        Thread t2 = new Thread(taskLockExample::redLight);
 
         Thread t3 = new Thread(() -> {
             try {
-                taskLockExample.method2();
+                taskLockExample.yellowLight();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
