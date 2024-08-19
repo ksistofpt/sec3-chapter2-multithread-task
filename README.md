@@ -1,11 +1,16 @@
 <h1>Task Description</h1>
 
-<p>You need to create a class with three methods: <code>method1</code>, <code>method2</code>, and <code>method3</code> (already implemented in the assignment). These methods must be executed strictly in a given order, regardless of the order of threads that call them. That is, <code>method1</code> should always be executed first, then <code>method2</code>, and only after that <code>method3</code>.</p>
+<p>
+        Imagine you are designing a traffic light controller for a busy intersection. The traffic light system consists of three stages: <strong>red light</strong>, <strong>yellow light</strong>, and <strong>green light</strong>. These stages must be executed in a specific order to ensure safe and efficient traffic flow.
+    </p>
+    <p>
+        Your task is to implement the methods: <strong>redLight()</strong>, <strong>yellowLight()</strong>, and <strong>greenLight()</strong>. These methods must be executed strictly in the order of a real traffic light: first red light, then yellow light, and finally green light, regardless of the order in which threads call them.
+    </p>
 
 <h2>Requirements:</h2>
 <ol>
     <li><strong>Synchronization:</strong> Ensure that methods are executed in strict order.</li>
-    <li><strong>Multithreading:</strong> Methods can be called from different threads, but execution must occur in the order: <code>method1</code>, <code>method2</code>, <code>method3</code>.</li>
+    <li><strong>Multithreading:</strong> Methods can be called from different threads, but execution must occur in the order: <code>method1</code>, <code>method2</code>, <code>greenLight()</code>.</li>
     <li><strong>Use Lock and Condition:</strong> Apply Lock to control access to shared resources and Condition to coordinate threads.</li>
 </ol>
 
